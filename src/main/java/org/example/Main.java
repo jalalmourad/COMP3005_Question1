@@ -5,6 +5,8 @@ import java.sql.*;
 public class Main {
 
 
+
+    //this method returns all the students in the students table
     public void getAllStudents(){
 
         String url = "jdbc:postgresql://localhost:5432/Question1";
@@ -29,6 +31,8 @@ public class Main {
         catch(Exception e){
         }
     }
+
+    //this method adds a student into the students table
     public void addStudent(int student_id,String first_name,String last_name,String email, String enrollment_date ){
 
         String url = "jdbc:postgresql://localhost:5432/Question1";
@@ -55,6 +59,8 @@ public class Main {
         catch(Exception e){
         }
     }
+
+    //This method updates the email of the student from the students table based on his student_id
     public void updateStudentEmail(int student_id,String email){
 
         String url = "jdbc:postgresql://localhost:5432/Question1";
@@ -80,6 +86,7 @@ public class Main {
         }
     }
 
+    //This method deletes a student from the students table based on his student_id
     public void deleteStudent(int student_id){
 
         String url = "jdbc:postgresql://localhost:5432/Question1";
@@ -108,10 +115,11 @@ public class Main {
     public static void main(String[] args) {
 
        Main main = new Main();
-      // main.getAllStudents();
-       //main.addStudent(6,"Alex","M","Alex@email.com","2023-10-01");
-        //main.updateStudentEmail(2,"test@test.com");
-        main.deleteStudent(6);
+
+      //main.getAllStudents();
+       //main.addStudent(4,"Alex","M","Alex@email.com","2023-10-01");
+        //main.updateStudentEmail(2,"Hello@hello.com");
+       // main.deleteStudent(1);
        main.getAllStudents();
     }
 }
