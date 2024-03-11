@@ -4,6 +4,17 @@ Description:
 This project contains 1 java class, which has methods to get, create, delete and update the students table.
 A video demonstration can be found on: https://youtu.be/kYrbZkdaJBE
 
+The SQL table was created using:
+
+CREATE TABLE students(
+student_id SERIAL,
+first_name TEXT NOT NULL,
+last_name TEXT NOT NULL,
+email TEXT NOT NULL UNIQUE,
+enrollment_date DATE,
+primary key (student_id)
+);
+
 The Project is made up of one file:
     Main.java                      A single Java script
   
